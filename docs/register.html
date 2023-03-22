@@ -20,6 +20,7 @@
 
         <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
 
+
     </head>
     <body data-new-gr-c-s-check-loaded="14.1094.0" data-gr-ext-installed="" style="margin-top: 150px;">
 
@@ -28,7 +29,7 @@
             <header id="masthead" class="site-header standard sticky" role="banner" style="position: fixed; top: 0px; transition: top 0.3s ease 0s;">		
                 <div class="container">
                     <div id="site-branding">			
-                       <a class="logo-brand" href="index.html">
+                        <a class="logo-brand" href="./main.html">
                             <img class="logo" src="assets/images/logo/logo.png" alt="Logo">					                            
                             <img class="retina-logo" src="assets/images/logo/logo2x.png" alt="Retina Logo">						                            
                         </a>	
@@ -40,11 +41,11 @@
                     </span>
                     <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
                         <ul id="top-menu" class="menu">
-                            <li class="current-menu-parent"><a href="index.html" style="color: #00629B;">Home</a>
+                            <li><a href="index.html" style="color: #182B49;">Home</a>
                             </li>
                             <li><a href="research.html" style="color: #182B49;">Research</a>
                             </li>
-                            <li><a href="register.html" style="color: #182B49;">Register</a>
+                            <li class="current-menu-parent"><a href="register.html" style="color: #00629B;">Register</a>
                             </li>
                             <li><a href="people.html" style="color: #182B49;">People</a>
                             </li>
@@ -74,7 +75,7 @@
                                             <div class="col-sm-12">
                                                 <div class="cbp-item" style="width: 1110px; left: 0px; top: 0px;"><div class="cbp-item-wrapper">
                                                     <div class="cbp-caption-defaultWrap">
-                                                        <img src="assets/images/icons/fig1.jpg" class="portfolio-media-image">
+                                                        <img src="./img/fig1.jpg" class="portfolio-media-image">
                                                     </div>
                                                 </div>                                          
                                             </div>
@@ -86,49 +87,56 @@
                                             <div class="col-sm-12"> 
                                                 <div class="heading-block m-b-10">
                                                     <h1 class="block-size-4">
-                                                        Aerodrome
+                                                        Register
                                                     </h1>
                                                 </div>
                                                 <div class="text-block m-b-45">
                                                     <p class="medium">
-                                                        The Aerodrome at UC San Diego is a research facility provided by the Contextual Robotics Institute to enable controlled, 
-                                                        outdoor research with Unmanned Aerial Vehicles (UAVs). Constructed in 2017 with funding from our partners at Qualcomm and 
-                                                        Northrop Grumman, the Aerodrome is San Diego's premier outdoor drone flight cage, supporting research and collaboration in autonomous flight, 
-                                                        perception, machine learning and multi-vehicle collaboration. The facility is an enclosed, mesh cage, roughly 45' x 55' feet in area and 35' tall. 
-                                                        The space is available to researchers, graduate students and undergrads (see details below for scheduling time).
+                                                        Register below with your name, email, lab/professor, and research project in order to get calendar and Aerodrome access. 
                                                     </p>
                                                 </div>
 
-                                                <div class="row">                                    
-                                                    <div class="col-md-3 m-b-25">
-                                                        <div class="icon-box">
-                                                            <img src="assets/images/icons/icons8-surface-50.png" class="figure-img img-fluid" alt="Space">
-                                                            <h4>Space</h4> 
-                                                            <h7>45' x 55' x 35'</h7>                                                                     
+                                                <div class="row m-t-40">                                    
+                                                    <div class="col-sm-12">
+                                                         <div role="form" class="kraftcf">                                                    
+                                                            <form id="contact-form" action="include/contact.php" method="post" class="kraftcf-form" novalidate="novalidate">                                                       
+                                                                <div class="contact-form-main">
+                                                                    <div class="contact-form-fields-wrap clearfix">
+                                                                        <div class="contact-form-fields">
+                                                                            <span class="kraftcf-form-control-wrap name">
+                                                                                <input type="text" name="name" value="" size="40" class="kraftcf-form-control kraftcf-text kraftcf-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name*">
+                                                                                <span role="alert" class="kraftcf-not-valid-tip">The field is required.</span>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="contact-form-fields">
+                                                                            <span class="kraftcf-form-control-wrap email">
+                                                                                <input type="email" name="email" value="" size="40" class="kraftcf-form-control kraftcf-text kraftcf-email kraftcf-validates-as-required kraftcf-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email*">
+                                                                                <span role="alert" class="kraftcf-not-valid-tip">The field is required.</span>
+                                                                                <span role="alert" class="kraftcf-not-valid-tip">The e-mail address entered is invalid.</span>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="contact-form-fields">
+                                                                            <span class="kraftcf-form-control-wrap subject">
+                                                                                <input type="text" name="subject" value="" size="40" class="kraftcf-form-control kraftcf-text" aria-required="true" aria-invalid="false" placeholder="Lab/Professor Name*">                                                                       
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <p>
+                                                                        <span class="kraftcf-form-control-wrap message">
+                                                                            <textarea name="message" cols="40" rows="10" class="kraftcf-form-control kraftcf-textarea kraftcf-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Give the project name and a brief description of the project*"></textarea>
+                                                                            <span role="alert" class="kraftcf-not-valid-tip">The field is required.</span>
+                                                                        </span>
+                                                                    </p>
+                                                                    <p>
+                                                                        <input type="submit" value="SEND MESSAGE" class="kraftcf-form-control kraftcf-submit">
+                                                                    </p>
+                                                                </div>
+                                                                <div class="kraftcf-response-output kraftcf-display-none kraftcf-validation-errors" role="alert">One or more fields have an error. Please check and try again.</div>
+                                                                <div class="kraftcf-response-output kraftcf-display-none kraftcf-mail-sent-ok" role="alert">Thank you for your message. It has been sent.</div>
+                                                            </form>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3 m-b-25">
-                                                        <div class="icon-box">
-                                                            <img src="assets/images/icons/icons8-sensor-50.png" class="figure-img img-fluid" alt="Mocap">
-                                                            <h4>MoCap</h4> 
-                                                            <h7>32 cameras</h7>                                                                    
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3 m-b-25">
-                                                        <div class="icon-box">
-                                                            <img src="assets/images/icons/worldwide-shipping.png" class="figure-img img-fluid" alt="Office">
-                                                            <h4>Office</h4>
-                                                            <h7>5 x 5 x 3</h7>                                                                      
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3 m-b-25">
-                                                        <div class="icon-box">
-                                                            <img src="assets/images/icons/location.png" class="figure-img img-fluid" alt="Location">
-                                                            <h4>Location</h4>
-                                                            <h7>9500 Gilman Drive</h7>                                                                     
-                                                        </div>
-                                                    </div>
-                                                </div>    
+                                                </div>     
 
                                                 <div class="row m-t-65 m-b-15">                                    
                                                     <div class="col-sm-12">
@@ -144,12 +152,19 @@
                                                     <div class="col-md-6 m-b-40">
                                                         <div class="text-block m-b-45">
                                                             <p class="medium">
-                                                                If you are interested in scheduling time in the Aerodrome, we ask that you please register with us using the register page on our website. 
-                                                                Our team will be happy to work with you to grant you permission to schedule a time slot.
-                                                                If you have any questions or would like more information about our Aerodrome and how it can support your research, please do not hesitate to reach out to us on our contact page.
+                                                                If your registration has been accepted and using the email you provided you can schedule your timeslots here by clicking on the calendar. 
+                                                            </p>
+                                                            <p class="medium">
+                                                                Please sure to read and follow the rules of our Code of Conduct page when utilizing the Aerodrome!
                                                             </p>
                                                             <div class="btn-container solid">
-                                                                <a href="register.html" title="Register Now">REGISTER NOW</a>
+                                                                <a href="./conduct.html" title="Code of Conduct">CODE OF CONDUCT</a>
+                                                            </div>	
+                                                            <p class="medium">
+                                                                Also refer to the instructions guide listed on our Instructions page.
+                                                            </p>
+                                                            <div class="btn-container solid">
+                                                                <a href="./instructions.html" title="Instructions">INSTRUCTIONS</a>
                                                             </div>	
                                                         </div>
                                                     </div>          
@@ -169,7 +184,7 @@
                                                                 Let’s work together! 								
                                                             </h2>				
                                                             <div class="btn-container solid">
-                                                                <a href="contact.html" title="GET IN TOUCH">GET IN TOUCH</a>
+                                                                <a href="./contact.html" title="GET IN TOUCH">GET IN TOUCH</a>
                                                             </div>				
                                                         </div>
                                                     </div>
