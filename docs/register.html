@@ -241,7 +241,31 @@
         <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
         <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
 
-        <script type='text/javascript' src='assets/js/main.js'></script>        
+        <script type='text/javascript' src='assets/js/main.js'></script>  
+        
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const form = event.target;
+    
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        form.style.display = 'none';
+                        document.getElementById('thank-you-message').style.display = 'block';
+                    } else {
+                        alert('Error: Please try again later.');
+                    }
+                }).catch(() => {
+                    alert('Error: Please try again later.');
+                });
+            });
+        </script>
         <!--  Scripts Ends -->
     
 
