@@ -20,6 +20,18 @@
 
         <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
 
+        <style>
+            #thank-you-message {
+                display: none;
+            }
+
+            .team-image {
+            width: 350px !important; /* Adjust this value as needed */
+            height: 450px !important; /* Adjust this value as needed */
+            object-fit: cover !important; /* Ensures the images maintain their aspect ratio while filling the dimensions */
+            }
+        </style>
+
 
     </head>
     <body data-new-gr-c-s-check-loaded="14.1094.0" data-gr-ext-installed="" style="margin-top: 150px;">
@@ -99,7 +111,7 @@
                                                 <div class="row m-t-40">                                    
                                                     <div class="col-sm-12">
                                                          <div role="form" class="kraftcf">                                                    
-                                                            <form id="contact-form" action="include/contact.php" method="post" class="kraftcf-form" novalidate="novalidate">                                                       
+                                                            <form id="contact-form" action="https://formspree.io/f/mzbqavno" method="post" class="kraftcf-form" novalidate="novalidate">                                                       
                                                                 <div class="contact-form-main">
                                                                     <div class="contact-form-fields-wrap clearfix">
                                                                         <div class="contact-form-fields">
@@ -116,8 +128,9 @@
                                                                             </span>
                                                                         </div>
                                                                         <div class="contact-form-fields">
-                                                                            <span class="kraftcf-form-control-wrap subject">
-                                                                                <input type="text" name="subject" value="" size="40" class="kraftcf-form-control kraftcf-text" aria-required="true" aria-invalid="false" placeholder="Lab/Professor Name*">                                                                       
+                                                                            <span class="kraftcf-form-control-wrap name">
+                                                                                <input type="text" name="name" value="" size="40" class="kraftcf-form-control kraftcf-text kraftcf-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Lab/Professor Name*">
+                                                                                <span role="alert" class="kraftcf-not-valid-tip">The field is required.</span>
                                                                             </span>
                                                                         </div>
                                                                     </div>
@@ -134,6 +147,8 @@
                                                                 <div class="kraftcf-response-output kraftcf-display-none kraftcf-validation-errors" role="alert">One or more fields have an error. Please check and try again.</div>
                                                                 <div class="kraftcf-response-output kraftcf-display-none kraftcf-mail-sent-ok" role="alert">Thank you for your message. It has been sent.</div>
                                                             </form>
+                                                            <div id="thank-you-message" class="kraftcf-response-output kraftcf-display-none kraftcf-mail-sent-ok" >
+                                                                Thank you for your message. It has been sent. </div>
                                                         </div>
                                                     </div>
                                                 </div>     
